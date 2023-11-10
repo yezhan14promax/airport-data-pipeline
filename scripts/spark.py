@@ -1,5 +1,6 @@
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
+from pyspark.sql.types import IntegerType, FloatType, StringType, DateType, TimestampType
 
 
 if __name__ == '__main__':
@@ -21,9 +22,9 @@ def dayingbiao():
 
 # Afficher le nombre d'enregistrements
 def dayingshuliang():
-    return  print("jeu de données des aéroports: ", df_air.count()),\
-            print("jeu de données des vols: ", df_fli.count()),\
-            print("jeu de données brutes des vols: ", df_raw.count())
+    return  print("aéroports: ", df_air.count()),\
+            print("flights: ", df_fli.count()),\
+            print("row flights: ", df_raw.count())
 #dayingshuliang()
 
 # Afficher les colonnes du dataframe
@@ -64,6 +65,15 @@ def zhunshi(zhonglei):
 #print(zhunshi('arr'))
 #print(zhunshi('all'))
 
+#Trouver la moyenne
+#La première moyenne est le retard de départ, la seconde le retard d'arrivée et la troisième le retard total.
+def pingjunzhi(df):
+    avg1=df.select(F.avg('DepDelay')).collect()[0][0]
+    avg2=df.select(F.avg('ArrDelay')).collect()[0][0]
+    df1=df.withColumn('totaldelay',F.col('DepDelay')+F.col('ArrDelay'))
+    avg3=df1.select(F.avg('totaldelay')).collect()[0][0]
+    return avg1,avg2,avg3
+print(pingjunzhi(df_fli))
 
 def hangban_info(start_airport_id, end_airport_id):
     """Cette fonction prend deux identifiants d'aéroport en entrée et renvoie toutes les informations de vol entre ces deux aéroports.
@@ -93,11 +103,53 @@ def diqv_info(location_type):
 # Afficher les aéroports qui ont le plus de vols
 def queshizhi(df):
     queshi_cols = []
-    for column in df.columns:
-        if df.where(F.col(column).isNull()).count() > 0:
-            queshi_cols.append(column)
-            print(column, df.where(F.col(column).isNull()).count())
-        else:
-            print(column, 'bon')
+    for i in df.columns:
+        if df.where(F.col(i).isNull()).count() > 0:
+            queshi_cols.append(i)
     return queshi_cols
 #print(queshizhi(df_raw))
+
+# Afficher les aéroports qui ont le plus de vols
+def dayingqueshizhi(df):
+    for i in df.columns:
+        print(i, df.where(F.col(i).isNull()).count())
+#dayingqueshizhi(df_raw)
+
+# Supprimer les aéroports qui ont le plus de vols
+def shanchuqueshizhi(df):
+    for i in queshizhi(df):
+        df = df.dropna(subset=[i])
+    return df
+df_raw=shanchuqueshizhi(df_raw)
+df_fli=shanchuqueshizhi(df_fli)
+df_air=shanchuqueshizhi(df_air)
+
+
+# Supprimer les doublons
+df_raw.dropDuplicates()
+df_fli.dropDuplicates()
+df_air.dropDuplicates()
+
+# Afficher les types de données
+def print_dtypes(df):
+    for column, dtype in df.dtypes:
+        print(f'{column}: {dtype}')
+        
+
+#Convertir le type de données
+#print_dtypes(df_air)
+df_air = df_air.withColumn('airport_id', df_air['airport_id'].cast(IntegerType()))
+#print_dtypes(df_air)
+
+#print_dtypes(df_fli)
+for i in df_fli.columns:
+    if i != 'Carrier':
+        df_fli = df_fli.withColumn(i, df_fli[i].cast(IntegerType()))
+#print_dtypes(df_fli)
+        
+#print_dtypes(df_raw)
+for i in df_raw.columns:
+    if i != 'Carrier':
+        df_raw = df_raw.withColumn(i, df_raw[i].cast(IntegerType()))
+#print_dtypes(df_raw)
+
