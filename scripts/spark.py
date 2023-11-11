@@ -1,10 +1,14 @@
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
-from pyspark.sql.types import IntegerType, FloatType, StringType, DateType, TimestampType
+from pyspark.ml import Pipeline
+from pyspark.sql.types import IntegerType
 from pyspark import SparkContext
 from pyspark.ml.feature import VectorAssembler as va
 from pyspark.ml.regression import LinearRegression as linreg
-from pyspark.ml import Pipeline
+from pyspark.ml.regression import DecisionTreeRegressor as dtr
+from pyspark.ml.evaluation import RegressionEvaluator as re
+
+
 
 '''1. Ingérer les données en tant que pyspark dataframe object'''
 if __name__ == '__main__':
@@ -169,32 +173,15 @@ for i in df_raw.columns:
 
 
 
-'''import matplotlib.pyplot as plt
-import seaborn as sns
-
-# 将Spark DataFrame转换为Pandas DataFrame
-pandas_df = df_fli.toPandas()
-
-# 使用Seaborn的distplot方法来绘制目标变量的分布图
-sns.distplot(pandas_df['DepDelay'])
-plt.show()
-
-# 使用Seaborn的scatterplot方法来绘制目标变量和其他特征之间的散点图
-for column in pandas_df.columns:
-    if column != 'DepDelay':
-        sns.scatterplot(x='DepDelay', y=column, data=pandas_df)
-        plt.show()
-'''
-
-
 '''4. Concevoir un modèle de Machine Learning, en utilisant sparkML qui vous permettra de 
 prédire si un vol a eu du retard ou pas (entrainement + Test)'''
 #régression linéaire
 def xianxinghuigui(df,f_col,labcol):
     '''Modèle de régression linéaire
-    :param f_col: colonne de caractéristiques
-    :param labcol: colonne d'étiquettes
-    :return: None
+    param df: DataFrame contenant les données d'entraînement et de test
+    param f_col: nom de la colonne contenant les caractéristiques
+    param labcol: nom de la colonne contenant les étiquettes
+    return: DataFrame contenant les prédictions
     '''
     a = va(inputCols=f_col, outputCol='features')
     df= a.transform(df)
@@ -206,9 +193,34 @@ def xianxinghuigui(df,f_col,labcol):
     print('他妈的值是'+str(lr_eva_r))
     predictions = lr_mod.transform(test)
     return predictions
-
+'''
 #sans aéroport
 col = df_fli.columns
 xianxinghuigui(df_fli,[c for c in col if c not in ['Carrier','OriginAirportID','DestAirportID']],'ArrDelay')
 #que DepDelay
-xianxinghuigui(df_fli,['DepDelay'],'ArrDelay').show()
+xianxinghuigui(df_fli,['DepDelay'],'ArrDelay')'''
+
+#arbre de décision
+def jueceshu(df,f_col,labcol):
+    """
+    param df: dataframe contenant les données d'entraînement et de test
+    param f_col: liste de noms de colonnes de fonctionnalités
+    param labcol: nom de la colonne cible
+    return: dataframe contenant les prédictions sur les données de test
+    """
+    a=va(inputCols=f_col,outputCol='features')
+    df=a.transform(df)
+    train, test = df.randomSplit([0.8, 0.2])
+    dt=dtr(featuresCol='features',labelCol=labcol)
+    dt_mod=dt.fit(train)
+    predictions = dt_mod.transform(test)
+    dt_eva=re(predictionCol='prediction', labelCol=labcol, metricName='rmse')
+    rmse=dt_eva.evaluate(predictions)
+    print('他妈的值是'+str(rmse))
+    return predictions
+
+#sans aéroport
+col = df_fli.columns
+jueceshu(df_fli,[c for c in col if c not in ['Carrier','OriginAirportID','DestAirportID']],'ArrDelay')
+#que DepDelay
+jueceshu(df_fli,['DepDelay'],'ArrDelay').show()
