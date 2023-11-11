@@ -1,0 +1,72 @@
+[2023-11-11T21:41:38.986+0100] {processor.py:157} INFO - Started process (PID=5200) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:41:38.986+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:41:38.987+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:41:38.987+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:41:38.992+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:41:39.068+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:41:39.068+0100] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-11T21:41:39.078+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:41:39.078+0100] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-11T21:41:39.088+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:41:39.088+0100] {manager.py:499} INFO - Created Permission View: %s
+[2023-11-11T21:41:39.089+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:41:39.088+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:41:39.095+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:41:39.094+0100] {dag.py:2963} INFO - Creating ORM DAG for sujet1
+[2023-11-11T21:41:39.100+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:41:39.100+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:41:39.114+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.132 seconds
+[2023-11-11T21:42:31.648+0100] {processor.py:157} INFO - Started process (PID=5452) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:42:31.656+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:42:31.658+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:42:31.657+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:42:31.673+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:42:31.690+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:42:31.690+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:42:31.704+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:42:31.704+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:42:31.722+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.081 seconds
+[2023-11-11T21:43:24.200+0100] {processor.py:157} INFO - Started process (PID=5852) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:43:24.208+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:43:24.210+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:43:24.209+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:43:24.226+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:43:24.246+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:43:24.245+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:43:24.261+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:43:24.261+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:43:24.277+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.084 seconds
+[2023-11-11T21:44:11.439+0100] {processor.py:157} INFO - Started process (PID=6104) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:44:11.445+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:44:11.446+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:44:11.446+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:44:11.451+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:44:11.462+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:44:11.462+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:44:11.474+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:44:11.474+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:44:11.491+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.054 seconds
+[2023-11-11T21:45:03.038+0100] {processor.py:157} INFO - Started process (PID=6234) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:45:03.045+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:45:03.046+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:45:03.045+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:45:03.051+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:45:03.061+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:45:03.061+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:45:03.073+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:45:03.073+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:45:03.105+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.068 seconds
+[2023-11-11T21:45:52.748+0100] {processor.py:157} INFO - Started process (PID=6360) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:45:52.749+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:45:52.749+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:45:52.749+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:45:52.754+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:45:52.765+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:45:52.765+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:45:52.778+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:45:52.777+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:45:52.801+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.055 seconds
+[2023-11-11T21:46:38.848+0100] {processor.py:157} INFO - Started process (PID=6498) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:46:38.855+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:46:38.855+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:46:38.855+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:46:38.861+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:46:38.871+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:46:38.870+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:46:38.883+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:46:38.882+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:46:38.900+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.053 seconds
+[2023-11-11T21:47:24.042+0100] {processor.py:157} INFO - Started process (PID=6655) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:47:24.048+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:47:24.049+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:47:24.049+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:47:24.054+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:47:24.064+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:47:24.063+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:47:24.075+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:47:24.075+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:47:24.091+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.051 seconds
+[2023-11-11T21:48:16.820+0100] {processor.py:157} INFO - Started process (PID=6806) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:48:16.826+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:48:16.827+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:48:16.827+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:48:16.835+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:48:16.849+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:48:16.849+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T21:48:16.861+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:48:16.861+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-06T00:00:00+00:00, run_after=2023-11-06T01:00:00+00:00
+[2023-11-11T21:48:16.884+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.067 seconds
+[2023-11-11T21:49:05.585+0100] {processor.py:157} INFO - Started process (PID=6959) to work on /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:49:05.592+0100] {processor.py:829} INFO - Processing file /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py for tasks to queue
+[2023-11-11T21:49:05.593+0100] {logging_mixin.py:154} INFO - [2023-11-11T21:49:05.593+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:49:05.593+0100] {processor.py:841} WARNING - No viable dags retrieved from /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py
+[2023-11-11T21:49:05.601+0100] {processor.py:179} INFO - Processing /home/zhan/.local/lib/python3.10/site-packages/airflow/example_dags/sujet1.py took 0.019 seconds
