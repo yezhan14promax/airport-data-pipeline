@@ -39,11 +39,15 @@ def jueceshu(df,f_col,labcol):
     return dt_mod,rmse,predictions
 
 if __name__ == '__main__':
+    #avec tous les colonnes suaf carrier
+    lr1=xianxinghuigui(df_fli,[c for c in df_fli.columns if c not in ['Carrier']],'ArrDelay')[2].show(5)
     #sans aéroport
-    lr1=xianxinghuigui(df_fli,[c for c in df_fli.columns if c not in ['Carrier','OriginAirportID','DestAirportID']],'ArrDelay')[2].show(5)
+    lr2=xianxinghuigui(df_fli,[c for c in df_fli.columns if c not in ['Carrier','OriginAirportID','DestAirportID']],'ArrDelay')[2].show(5)
     #que DepDelay
-    lr2=xianxinghuigui(df_fli,['DepDelay'],'ArrDelay')[2].show(5)
+    lr3=xianxinghuigui(df_fli,['DepDelay'],'ArrDelay')[2].show(5)
+    #avec tous les colonnes suaf carrier
+    dt1=jueceshu(df_fli,[c for c in df_fli.columns if c not in ['Carrier']],'ArrDelay')[2].show(5)
     #sans aéroport
-    dt1=jueceshu(df_fli,[c for c in df_fli.columns if c not in ['Carrier','OriginAirportID','DestAirportID']],'ArrDelay')[2].show(5)
+    dt2=jueceshu(df_fli,[c for c in df_fli.columns if c not in ['Carrier','OriginAirportID','DestAirportID']],'ArrDelay')[2].show(5)
     #que DepDelay
-    dt2=jueceshu(df_fli,['DepDelay'],'ArrDelay')[2].show(5)
+    dt3=jueceshu(df_fli,['DepDelay'],'ArrDelay')[2].show(5)
