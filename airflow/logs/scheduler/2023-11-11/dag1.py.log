@@ -1318,3 +1318,24 @@ ImportError: attempted relative import with no known parent package
 [2023-11-11T23:41:10.277+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:41:10.277+0100] {dag.py:2941} INFO - Sync 1 DAGs
 [2023-11-11T23:41:10.292+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:41:10.292+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-11T00:00:00+00:00, run_after=2023-11-11T01:00:00+00:00
 [2023-11-11T23:41:10.316+0100] {processor.py:179} INFO - Processing /home/zhan/examen/airflow/dags/dag1.py took 0.069 seconds
+[2023-11-11T23:41:47.232+0100] {processor.py:157} INFO - Started process (PID=44910) to work on /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:41:47.235+0100] {processor.py:829} INFO - Processing file /home/zhan/examen/airflow/dags/dag1.py for tasks to queue
+[2023-11-11T23:41:47.236+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:41:47.236+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:41:47.244+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:41:47.258+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:41:47.258+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T23:41:47.271+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:41:47.271+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-11T00:00:00+00:00, run_after=2023-11-11T01:00:00+00:00
+[2023-11-11T23:41:47.289+0100] {processor.py:179} INFO - Processing /home/zhan/examen/airflow/dags/dag1.py took 0.060 seconds
+[2023-11-11T23:42:25.875+0100] {processor.py:157} INFO - Started process (PID=45400) to work on /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:42:25.882+0100] {processor.py:829} INFO - Processing file /home/zhan/examen/airflow/dags/dag1.py for tasks to queue
+[2023-11-11T23:42:25.883+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:42:25.882+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:42:25.893+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:42:25.910+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:42:25.910+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T23:42:25.925+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:42:25.924+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-11T00:00:00+00:00, run_after=2023-11-11T01:00:00+00:00
+[2023-11-11T23:42:25.950+0100] {processor.py:179} INFO - Processing /home/zhan/examen/airflow/dags/dag1.py took 0.080 seconds
+[2023-11-11T23:43:09.338+0100] {processor.py:157} INFO - Started process (PID=45525) to work on /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:43:09.340+0100] {processor.py:829} INFO - Processing file /home/zhan/examen/airflow/dags/dag1.py for tasks to queue
+[2023-11-11T23:43:09.341+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:43:09.340+0100] {dagbag.py:536} INFO - Filling up the DagBag from /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:43:09.350+0100] {processor.py:839} INFO - DAG(s) dict_keys(['sujet1']) retrieved from /home/zhan/examen/airflow/dags/dag1.py
+[2023-11-11T23:43:09.370+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:43:09.369+0100] {dag.py:2941} INFO - Sync 1 DAGs
+[2023-11-11T23:43:09.385+0100] {logging_mixin.py:154} INFO - [2023-11-11T23:43:09.385+0100] {dag.py:3722} INFO - Setting next_dagrun for sujet1 to 2023-11-11T00:00:00+00:00, run_after=2023-11-11T01:00:00+00:00
+[2023-11-11T23:43:09.402+0100] {processor.py:179} INFO - Processing /home/zhan/examen/airflow/dags/dag1.py took 0.068 seconds
