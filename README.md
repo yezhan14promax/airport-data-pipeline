@@ -35,11 +35,12 @@ python3 ./airflow/dags/dag.py
 
 ## Explication des scripts
 
-    recuperer.py : Ce script est utilisé pour récupérer des données.
-    analyse.py : Ce script est utilisé pour l'analyse des données.
-    nettoyage.py : Ce script est utilisé pour nettoyer les données.
-    formation.py : Ce script est utilisé pour le prétraitement des données.
-    evaluation.py : Ce script est utilisé pour évaluer le modèle.
+    ./scripts/recuperer.py : Ce script est utilisé pour récupérer des données.
+    ./scripts/analyse.py : Ce script est utilisé pour l'analyse des données.
+    ./scripts/nettoyage.py : Ce script est utilisé pour nettoyer les données.
+    ./scripts/formation.py : Ce script est utilisé pour le prétraitement des données.
+    ./scripts/evaluation.py : Ce script est utilisé pour évaluer le modèle.
+    ./airflow/dags/dag.py: Ce script est utilisé pour ajouter des Dags au Airflow
 
 ## Contribution
 
