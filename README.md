@@ -40,6 +40,7 @@ python3 ./airflow/dags/dag.py
     nettoyage.py : Ce script est utilisé pour nettoyer les données.
     formation.py : Ce script est utilisé pour le prétraitement des données.
     evaluation.py : Ce script est utilisé pour évaluer le modèle.
+    dag.py: Ce script est utilisé pour ajouter des Dags au Airflow
 
 ## Contribution
 
