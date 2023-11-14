@@ -1,4 +1,7 @@
 from recuperer import *
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 '''2. Effectuer des analyses des données tout en utilisant les opérations à disposition'''
 # Afficher le schéma du dataframe
 def dayingbiao():
@@ -79,6 +82,18 @@ def diqv_info(location_type):
         return df_air.groupBy('State').agg(F.count('Name').alias('num_air'),\
                F.collect_list('Name').alias('name_air'))
     else:
-        return "'city' ou 'state'？"
-    
+        return "'city' ou 'state'？"    
 #diqv_info().show()
+
+def keshihua():
+    # Convertir
+    pandas_df = df_fli.toPandas()
+    # 
+    sns.distplot(pandas_df['ArrDelay'])
+    plt.show()
+    # 
+    for col in pandas_df.columns:
+        if col != 'ArrDelay':
+            sns.scatterplot(x='ArrDelay', y=col, data=pandas_df)
+            plt.show()
+#keshihua()

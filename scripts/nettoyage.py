@@ -27,10 +27,27 @@ def print_dtypes(df):
 df_raw=df_raw.dropna()
 df_fli=df_fli.dropna()
 df_air=df_air.dropna()
+
 # Supprimer les doublons
 df_raw=df_raw.dropDuplicates()
 df_fli=df_fli.dropDuplicates()
 df_air=df_air.dropDuplicates()
+
+#Supprimer les valeurs aberrantes
+def shanchuyichangzhi(df):
+    for col in df.columns :
+        if col != 'Carrier':
+            Q1 = df.stat.approxQuantile(col, [0.25], 0)
+            Q3 = df.stat.approxQuantile(col, [0.75], 0)
+            IQR = Q3[0] - Q1[0]
+            lower_bound = Q1[0] - 1.5 * IQR
+            upper_bound = Q3[0] + 1.5 * IQR
+            df = df.filter((F.col(col) >= lower_bound) & (F.col(col) <= upper_bound))
+    return df
+df_raw=shanchuyichangzhi(df_raw)
+df_fli=shanchuyichangzhi(df_fli)
+df_air=shanchuyichangzhi(df_air)
+
 #Convertir le type de données
 df_air = df_air.withColumn('airport_id', df_air['airport_id'].cast(IntegerType()))
 for i in df_fli.columns:
@@ -39,3 +56,4 @@ for i in df_fli.columns:
 for i in df_raw.columns:
     if i != 'Carrier':
         df_raw = df_raw.withColumn(i, df_raw[i].cast(IntegerType()))
+
