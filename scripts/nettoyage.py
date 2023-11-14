@@ -46,7 +46,6 @@ def shanchuyichangzhi(df):
     return df
 df_raw=shanchuyichangzhi(df_raw)
 df_fli=shanchuyichangzhi(df_fli)
-df_air=shanchuyichangzhi(df_air)
 
 #Convertir le type de données
 df_air = df_air.withColumn('airport_id', df_air['airport_id'].cast(IntegerType()))

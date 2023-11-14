@@ -85,6 +85,7 @@ def diqv_info(location_type):
         return "'city' ou 'state'？"    
 #diqv_info().show()
 
+#visualisation des données
 def keshihua():
     # Convertir
     pandas_df = df_fli.toPandas()
